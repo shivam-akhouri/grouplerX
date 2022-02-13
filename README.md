@@ -1,4 +1,5 @@
 # grouplerX
+<<<<<<< HEAD
 ## Screen shots
 <div style="display:flex;">
   <img src= "https://raw.githubusercontent.com/shivam-akhouri/grouplerX/master/pictures/welcome.jpeg" width="30%" height="600">
@@ -11,3 +12,5 @@
 
 #### Figma Link: 
 https://www.figma.com/file/4nv6CmioGDylJ7UI65d0Vs/Groupler?node-id=0%3A1
+=======
+>>>>>>> d63ce615e83a1274fdcd0d176d69434a04852dbb

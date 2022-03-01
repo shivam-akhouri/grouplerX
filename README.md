@@ -9,5 +9,3 @@
   <img src= "https://raw.githubusercontent.com/shivam-akhouri/grouplerX/master/pictures/profile.jpeg"  width="30%" height="600">
 </div>
 
-#### Figma Link: 
-https://www.figma.com/file/4nv6CmioGDylJ7UI65d0Vs/Groupler?node-id=0%3A1

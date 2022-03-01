@@ -1,8 +1,12 @@
 import { LinearGradient } from 'expo-linear-gradient';
 import { StatusBar } from 'expo-status-bar';
+import { useContext } from 'react';
 import { Dimensions, StyleSheet, Text, TextInput, View } from 'react-native';
+import { SignInContext } from '../../providers/signinProvider';
 
 export default function Profile() {
+  const signin = useContext(SignInContext);
+
   return (
     <View style={styles.container}>
         <LinearGradient
@@ -23,17 +27,20 @@ export default function Profile() {
                 </View>
             </View>
         </LinearGradient>
-        <View style={{flex: 1, paddingTop: 60, width: "80%"}}>
-            <Text>First Name</Text>
-            <TextInput placeholder='Shivam' style={{borderBottomWidth: 1, borderColor: "black", marginBottom: 34.59}}/>
+        {signin.username == false ?
+          <View>You are already logged in.</View>:
+          <View style={{flex: 1, paddingTop: 60, width: "80%"}}>
+              <Text>First Name</Text>
+              <TextInput placeholder='Shivam' style={{borderBottomWidth: 1, borderColor: "black", marginBottom: 34.59}}/>
 
-            <Text>Last Name</Text>
-            <TextInput placeholder='Akhouri' style={{borderBottomWidth: 1, borderColor: "black", marginBottom: 34.59}}/>
-            <Text>Phone Number</Text>
-            <TextInput placeholder='9876543210' style={{borderBottomWidth: 1, borderColor: "black", marginBottom: 34.59}}/>
-            <Text>Interests</Text>
-            <TextInput placeholder='Enter your Interests' style={{borderBottomWidth: 1, borderColor: "black", marginBottom: 34.59}}/>
-        </View>
+              <Text>Last Name</Text>
+              <TextInput placeholder='Akhouri' style={{borderBottomWidth: 1, borderColor: "black", marginBottom: 34.59}}/>
+              <Text>Phone Number</Text>
+              <TextInput placeholder='9876543210' style={{borderBottomWidth: 1, borderColor: "black", marginBottom: 34.59}}/>
+              <Text>Interests</Text>
+              <TextInput placeholder='Enter your Interests' style={{borderBottomWidth: 1, borderColor: "black", marginBottom: 34.59}}/>
+          </View>
+        }
     </View>
   );
 }

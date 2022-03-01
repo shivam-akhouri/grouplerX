@@ -19,14 +19,14 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <SignInProvider>
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Timeline" screenOptions={{headerShown: false}}>
-        <Stack.Screen name="Welcome" component={Welcome} />
-        <Stack.Screen name="Homepage" component={Homepage} />
-        <Stack.Screen name="Timeline" component={Timeline} />
-        <Stack.Screen name="WordCoach" component={WordCoach} />
-      </Stack.Navigator>
-    </NavigationContainer>
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName="Timeline" screenOptions={{headerShown: false}}>
+          <Stack.Screen name="Welcome" component={Welcome} />
+          <Stack.Screen name="Homepage" component={Homepage} />
+          <Stack.Screen name="Timeline" component={Timeline} />
+          <Stack.Screen name="WordCoach" component={WordCoach} />
+        </Stack.Navigator>
+      </NavigationContainer>
     </SignInProvider>
   );
 }

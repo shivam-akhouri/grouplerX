@@ -1,5 +1,4 @@
 # grouplerX
-## Screen shots
 
 ## Check Desc:
 

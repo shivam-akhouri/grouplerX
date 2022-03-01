@@ -6,12 +6,28 @@ import Profile from './pages/Profile';
 import Homepage from './pages/homepage';
 import SignIn from './pages/signIn';
 import Welcome from './pages/welcome';
-import Chats from './pages/chats';
 import Meditation from './pages/meditation';
+import WordCoach from "./pages/WordCoach";
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Timeline from './pages/Timeline';
+import { useContext } from 'react';
+import SignInProvider from './providers/signinProvider';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <Welcome />
+    <SignInProvider>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Timeline" screenOptions={{headerShown: false}}>
+        <Stack.Screen name="Welcome" component={Welcome} />
+        <Stack.Screen name="Homepage" component={Homepage} />
+        <Stack.Screen name="Timeline" component={Timeline} />
+        <Stack.Screen name="WordCoach" component={WordCoach} />
+      </Stack.Navigator>
+    </NavigationContainer>
+    </SignInProvider>
   );
 }
 
